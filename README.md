@@ -1,9 +1,8 @@
-# IAT
+## IAT
 
-<<<<<<< HEAD
 O IAT_Project é um projeto criado para efetuar o recebimento de arquivos no formato .pcap gerado pelo Wireshark e disponibilizar seus dados em ordem crescente.<br />
 O cálculo do IAT é a soma do tempo entre as requisições dividido pelo número de requisições. <br />
-=======
+
 
 ### Pré - Requisitos: 
 
