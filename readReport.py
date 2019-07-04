@@ -45,9 +45,11 @@ def readPcap():
 
 def list():
     dadosPcap.sort(key=lambda x: x.iat, reverse=False)
+    print("*---------------------------RESULTADOS-------------------------*")
     for x in dadosPcap:
-        print("Ip origem: ", x.ipOrigem,"\nPorta origem: ", x.portaOrigem, "\nIp destino: ", x.ipDestino, "\nPorta destino: ", x.portaDestino, "\nIAT: ", x.iat, "\nSoma dos tempos entre as requisições: ", x.iatTotal, "\nQuantidade de requisiçõs: ", x.quantRequisicao)
-        print("*--------------------------------------------------------------*")
+        if(x.iat > 0):
+            print("Ip origem: ", x.ipOrigem,"\nPorta origem: ", x.portaOrigem, "\nIp destino: ", x.ipDestino, "\nPorta destino: ", x.portaDestino, "\nIAT: ", x.iat, "\nSoma dos tempos entre as requisições: ", x.iatTotal, "\nQuantidade de requisiçõs: ", x.quantRequisicao)
+            print("*--------------------------------------------------------------*")
 
 readPcap()
 list()
