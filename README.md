@@ -18,5 +18,5 @@ O cálculo do IAT é a soma do tempo entre as requisições dividido pelo númer
     activate    <br />
 4 - Volte a pasta raiz do projeto e instale os requisitos do sistema com o comando:    <br />
   	pip install -r requirements.txt    <br />
-5 - Para rodar o projeto execute no terminal, o comando readReport.py.python. <br />
+5 - Para rodar o projeto execute no terminal, o comando readReport.py python. <br />
 
