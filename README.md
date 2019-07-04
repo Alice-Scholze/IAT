@@ -1,7 +1,8 @@
 # IAT
 # IAT_Project
 
-O IAT_Project é um projeto criado para efetuar o recebimento de arquivos no formato .pcap gerado pelo Wireshark e disponibilização em ordem crescente, o IAT médio para cada conexão.
+O IAT_Project é um projeto criado para efetuar o recebimento de arquivos no formato .pcap gerado pelo Wireshark e disponibilização dos dados em ordem crescente.<br />
+O cálculo do IAT é a soma do tempo entre as requisições dividido pelo número de requisições. <br />
 
 ### Pré - Requisitos: 
 
@@ -17,3 +18,5 @@ O IAT_Project é um projeto criado para efetuar o recebimento de arquivos no for
     activate    <br />
 4 - Volte a pasta raiz do projeto e instale os requisitos do sistema com o comando:    <br />
   	pip install -r requirements.txt    <br />
+5 - Para rodar o projeto execute no terminal, o comando readReport.py.python. <br />
+
