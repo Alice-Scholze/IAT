@@ -38,6 +38,7 @@ def readPcap():
                     #soma dos tempos entre as requisições dividido pelo nímero de requisições
                     x.quantRequisicao += 1
                     x.iatTotal += file.ts - x.ts
+                    x.ts = file.ts
                     x.iat = x.iatTotal / x.quantRequisicao
                     break
             else:

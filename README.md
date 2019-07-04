@@ -1,7 +1,6 @@
 # IAT
-# IAT_Project
 
-O IAT_Project é um projeto criado para efetuar o recebimento de arquivos no formato .pcap gerado pelo Wireshark e disponibilização em ordem crescente, o IAT médio para cada conexão.
+O IAT é um projeto criado para efetuar o recebimento de arquivos no formato .pcap gerado pelo Wireshark e disponibilizar o conteúdo ordenado pelo IAT médio de cada conexão.
 
 ### Pré - Requisitos: 
 
