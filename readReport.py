@@ -14,14 +14,15 @@ class Pcap:
 dadosPcap = []
 
 def readPcap():
+    #abre o arquivo .pcap e transforma o dado binario pelo comando rb
     f = open('smallFlows.pcap', 'rb')
     pcap = dpkt.pcap.Reader(f)
     for ts, buf in pcap:
         eth = dpkt.ethernet.Ethernet(buf)
-        file = Pcap()
         ip = eth.data
         tcp = ip.data
         if eth.type == dpkt.ethernet.ETH_TYPE_IP and ip.p == dpkt.ip.IP_PROTO_TCP:
+            file = Pcap()
             file.ipOrigem = socket.inet_ntoa(ip.src)
             file.ipDestino = socket.inet_ntoa(ip.dst)
             file.portaOrigem = tcp.sport
@@ -38,12 +39,9 @@ def readPcap():
                     x.quantRequisicao += 1
                     x.iatTotal += file.ts - x.ts
                     x.iat = x.iatTotal / x.quantRequisicao
-                    #print("Ja existe : ", x.iat, " ip : ", x.ipOrigem)
                     break
             else:
                 dadosPcap.append(file)
-                #print("Não existe : ", file.ipOrigem)
-        #print(dadosPcap[y].ipOrigem, " - ", dadosPcap[y].ipDestino, " - ", dadosPcap[y].ts)
 
 def list():
     dadosPcap.sort(key=lambda x: x.iat, reverse=False)
